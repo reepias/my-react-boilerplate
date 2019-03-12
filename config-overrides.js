@@ -1,13 +1,22 @@
-const { override, fixBabelImports, babelInclude } = require('customize-cra')
+const {
+  override,
+  fixBabelImports,
+  babelInclude,
+  addLessLoader,
+} = require('customize-cra')
 const path = require('path')
 
 module.exports = override(
   fixBabelImports('import', {
     libraryName: 'antd',
     libraryDirectory: 'es',
-    style: 'css',
+    style: true,
   }),
   babelInclude([
     path.resolve('src'), // make sure you link your own source
   ]),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@primary-color': '#1DA57A' },
+  }),
 )
