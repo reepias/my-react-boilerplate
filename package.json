@@ -2,6 +2,12 @@
   "name": "my-react-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/reepias/my-react-boilerplate.git"
+  },
+  "author": "Adthasit Suksomthawisap",
+  "license": "MIT",
   "dependencies": {
     "antd": "^3.15.0",
     "babel-plugin-import": "^1.11.0",
@@ -14,7 +20,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "prettify": "prettier --write src/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
 }
